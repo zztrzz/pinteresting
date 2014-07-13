@@ -79,4 +79,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+#note to set this to actual domain name
+config.action_mailer.default_url_options = { :host => 'http://omg-pinteresting.herokuapp.com/' }
+
 end
