@@ -9,7 +9,24 @@
  <div class="panel-body">
   <p><strong>Description: <%= @pin.description %>
  </strong></p>
-  
+
+ 
+ <%= form_for @pin.answers.new do |f| %>
+ <%= @pin.id %>
+   <%= f.hidden_field :pin_id, :value => @pin.id %>
+       
+
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+ 
+  <div class="actions">
+
+    <%= f.submit %>
+</div>
+<%end%>
+
+
+
 <% if @pin.user == current_user %>
 <div class="actions">
 <%= link_to 'Edit', edit_pin_path(@pin) %> 
@@ -18,3 +35,4 @@
 </div>
 </div>
 </div>
+

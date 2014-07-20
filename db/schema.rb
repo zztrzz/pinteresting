@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140720015647) do
+ActiveRecord::Schema.define(version: 20140720082149) do
+
+  create_table "answers", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "pin_id"
+    t.integer  "user_id"
+  end
+
+  add_index "answers", ["pin_id"], name: "index_answers_on_pin_id"
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id"
 
   create_table "pins", force: true do |t|
     t.string   "description"

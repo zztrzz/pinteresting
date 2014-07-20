@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @answer.description %>
+</p>
+<% if @answer.user==current_user %>
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>
+<%end%>
