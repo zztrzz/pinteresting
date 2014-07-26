@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   end
  def something 
  	end
+
+ 	def crack
+ 	end
+ 	
 end

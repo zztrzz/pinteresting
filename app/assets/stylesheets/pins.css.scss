@@ -12,9 +12,53 @@
 	margin: 5px;
 	width: 200px;
 
+
 }
 
-.box img {
-	width: 100%;
+#wrapper img{
+	width:100%;
+
 	 
 }
+
+ 
+#wrapper
+{
+	overflow: hidden;
+	text-align:center;
+} 
+
+  #wrapper .text2
+  { 
+opacity:0;
+position:relative;
+bottom:110px;
+     
+  }
+ 
+
+ #wrapper:hover img{
+ 	opacity:0.2;
+ }
+
+#wrapper:hover .text2 {
+opacity:1;
+font-family: helvetica;
+font-size: 10px
+
+
+}
+
+ 
+.action {
+	font-size: 8px;
+	position:absolute;
+bottom:50px;
+left:20 px;
+ 
+}
+
+ 
+ 
+ 
+ 

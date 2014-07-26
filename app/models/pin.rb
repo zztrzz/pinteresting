@@ -7,6 +7,7 @@ validates_attachment_content_type :image, :content_type => ["image/jpg", "image/
 
 validates :image, presence: true
   validates :description, presence: true
+  validate :price, presence: true
 
    
 end 
